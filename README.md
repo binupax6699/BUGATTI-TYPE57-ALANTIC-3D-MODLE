@@ -1,240 +1,194 @@
 # BUGATTI-TYPE57-ALANTIC-3D-MODLE
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 1920 1080"
+    width="100%"
+>
 
-<title>Bugatti Destrier Showcase</title>
+    <defs>
 
-<style>
+        <!-- ============================= -->
+        <!-- PANEL 1 CLIP -->
+        <!-- ============================= -->
 
-    * {
-        box-sizing: border-box;
-    }
+        <clipPath id="clip1">
+            <rect x="0" y="0" width="480" height="1080"/>
+        </clipPath>
 
-    html, body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        overflow: hidden;
-    }
+        <!-- ============================= -->
+        <!-- PANEL 2 CLIP -->
+        <!-- ============================= -->
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        <clipPath id="clip2">
+            <rect x="480" y="0" width="480" height="1080"/>
+        </clipPath>
 
-    /* =====================================================
-       MAIN 16:9 CANVAS
-       ===================================================== */
+        <!-- ============================= -->
+        <!-- PANEL 3 CLIP -->
+        <!-- ============================= -->
 
-    .showcase {
-        width: min(100vw, 177.7778vh);
-        height: min(100vh, 56.25vw);
+        <clipPath id="clip3">
+            <rect x="960" y="0" width="480" height="1080"/>
+        </clipPath>
 
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        <!-- ============================= -->
+        <!-- PANEL 4 CLIP -->
+        <!-- ============================= -->
 
-        background: #000;
+        <clipPath id="clip4">
+            <rect x="1440" y="0" width="480" height="1080"/>
+        </clipPath>
 
-        overflow: hidden;
-    }
-
-
-    /* =====================================================
-       FIXED PANELS
-       ===================================================== */
-
-    .panel {
-        position: relative;
-
-        width: 100%;
-        height: 100%;
-
-        overflow: hidden;
-
-        background: #000;
-
-        border-right: 2px solid #000;
-    }
-
-    .panel:last-child {
-        border-right: none;
-    }
+    </defs>
 
 
-    /* =====================================================
-       IMAGE
-       ===================================================== */
+    <!-- ========================================= -->
+    <!-- BACKGROUND -->
+    <!-- ========================================= -->
 
-    .panel img {
-        position: absolute;
-
-        top: 0;
-        left: 0;
-
-        height: 100%;
-        width: auto;
-
-        max-width: none;
-
-        object-fit: cover;
-
-        transform: translateX(0);
-
-        animation-name: slide;
-        animation-duration: 8s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
+    <rect
+        width="1920"
+        height="1080"
+        fill="#050505"
+    />
 
 
-    /* =====================================================
-       SLIDING ANIMATION
-       ===================================================== */
+    <!-- ========================================= -->
+    <!-- PANEL 1 — CLAY -->
+    <!-- ========================================= -->
 
-    @keyframes slide {
+    <g clip-path="url(#clip1)">
 
-        0% {
-            transform: translateX(0%);
-        }
-
-        25% {
-            transform: translateX(-25%);
-        }
-
-        50% {
-            transform: translateX(-50%);
-        }
-
-        75% {
-            transform: translateX(-75%);
-        }
-
-        100% {
-            transform: translateX(-75%);
-        }
-
-    }
-
-
-    /* =====================================================
-       OPTIONAL PANEL LABELS
-       ===================================================== */
-
-    .label {
-        position: absolute;
-
-        left: 20px;
-        bottom: 20px;
-
-        z-index: 10;
-
-        color: white;
-
-        font-family:
-            Arial,
-            Helvetica,
-            sans-serif;
-
-        font-size: 14px;
-        font-weight: 600;
-
-        letter-spacing: 2px;
-
-        text-transform: uppercase;
-
-        text-shadow:
-            0 2px 10px rgba(0,0,0,0.8);
-
-        pointer-events: none;
-    }
-
-</style>
-</head>
-
-
-<body>
-
-
-<!-- =======================================================
-     4 FIXED WINDOWS
-     ======================================================= -->
-
-<div class="showcase">
-
-
-    <!-- ================= CLAY ================= -->
-
-    <div class="panel">
-
-        <img
-            src="Renders/C001.png"
-            alt="Destrier Clay"
+        <image
+            xlink:href="Renders/C001.png"
+            x="0"
+            y="0"
+            width="1920"
+            height="1080"
+            preserveAspectRatio="none"
         >
 
-        <div class="label">
-            CLAY
-        </div>
+            <animate
+                attributeName="x"
+                values="0;-480;-960;-1440;-960;-480;0"
+                dur="12s"
+                repeatCount="indefinite"
+            />
 
-    </div>
+        </image>
+
+    </g>
 
 
-    <!-- ================= TOPOLOGY ================= -->
+    <!-- ========================================= -->
+    <!-- PANEL 2 — TOPOLOGY -->
+    <!-- ========================================= -->
 
-    <div class="panel">
+    <g clip-path="url(#clip2)">
 
-        <img
-            src="Renders/T001.png"
-            alt="Destrier Topology"
+        <image
+            xlink:href="Renders/T001.png"
+            x="480"
+            y="0"
+            width="1920"
+            height="1080"
+            preserveAspectRatio="none"
         >
 
-        <div class="label">
-            TOPOLOGY
-        </div>
+            <animate
+                attributeName="x"
+                values="480;0;-480;-960;-480;0;480"
+                dur="12s"
+                repeatCount="indefinite"
+            />
 
-    </div>
+        </image>
+
+    </g>
 
 
-    <!-- ================= ZEBRA ================= -->
+    <!-- ========================================= -->
+    <!-- PANEL 3 — ZEBRA -->
+    <!-- ========================================= -->
 
-    <div class="panel">
+    <g clip-path="url(#clip3)">
 
-        <img
-            src="Renders/Z001.png"
-            alt="Destrier Zebra Analysis"
+        <image
+            xlink:href="Renders/Z001.png"
+            x="960"
+            y="0"
+            width="1920"
+            height="1080"
+            preserveAspectRatio="none"
         >
 
-        <div class="label">
-            ZEBRA
-        </div>
+            <animate
+                attributeName="x"
+                values="960;480;0;-480;0;480;960"
+                dur="12s"
+                repeatCount="indefinite"
+            />
 
-    </div>
+        </image>
+
+    </g>
 
 
-    <!-- ================= FINAL ================= -->
+    <!-- ========================================= -->
+    <!-- PANEL 4 — FINAL -->
+    <!-- ========================================= -->
 
-    <div class="panel">
+    <g clip-path="url(#clip4)">
 
-        <img
-            src="Renders/R001.png"
-            alt="Destrier Final Render"
+        <image
+            xlink:href="Renders/R001.png"
+            x="1440"
+            y="0"
+            width="1920"
+            height="1080"
+            preserveAspectRatio="none"
         >
 
-        <div class="label">
-            FINAL
-        </div>
+            <animate
+                attributeName="x"
+                values="1440;960;480;0;480;960;1440"
+                dur="12s"
+                repeatCount="indefinite"
+            />
 
-    </div>
+        </image>
+
+    </g>
 
 
-</div>
+    <!-- ========================================= -->
+    <!-- PANEL DIVIDERS -->
+    <!-- ========================================= -->
 
+    <rect
+        x="478"
+        y="0"
+        width="4"
+        height="1080"
+        fill="#111111"
+    />
 
-</body>
-</html>
+    <rect
+        x="958"
+        y="0"
+        width="4"
+        height="1080"
+        fill="#111111"
+    />
+
+    <rect
+        x="1438"
+        y="0"
+        width="4"
+        height="1080"
+        fill="#111111"
+    />
+
+</svg>
