@@ -1,97 +1,240 @@
 # BUGATTI-TYPE57-ALANTIC-3D-MODLE
 
-import bpy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-# Image paths
-images = [
-    "Renders/C001.png",  # Clay
-    "Renders/T001.png",  # Topology
-    "Renders/Z001.png",  # Zebra
-    "Renders/R001.png",  # Render
-]
+<title>Bugatti Destrier Showcase</title>
 
-# Output
-output_path = "Renders/Destrier_Showcase.mp4"
+<style>
 
-# Animation settings
-FPS = 30
-PANEL_WIDTH = 480
-PANEL_HEIGHT = 270
-DURATION_PER_IMAGE = 3
-SLIDE_DURATION = 1
+    * {
+        box-sizing: border-box;
+    }
 
-# Create a new scene
-scene = bpy.context.scene
-scene.render.engine = 'BLENDER_EEVEE_NEXT'
-scene.render.resolution_x = PANEL_WIDTH * 4
-scene.render.resolution_y = PANEL_HEIGHT
-scene.render.resolution_percentage = 100
-scene.render.fps = FPS
+    html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+    }
 
-# Clear scene
-bpy.ops.object.select_all(action='SELECT')
-bpy.ops.object.delete(use_global=False)
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-# Create four panels
-for i, image_path in enumerate(images):
+    /* =====================================================
+       MAIN 16:9 CANVAS
+       ===================================================== */
 
-    # Load image
-    try:
-        img = bpy.data.images.load(bpy.path.abspath("//" + image_path))
-    except:
-        print("Could not load:", image_path)
-        continue
+    .showcase {
+        width: min(100vw, 177.7778vh);
+        height: min(100vh, 56.25vw);
 
-    # Create plane
-    bpy.ops.mesh.primitive_plane_add(size=2)
-    plane = bpy.context.object
-    plane.name = f"Panel_{i+1}"
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
 
-    # Scale plane to panel aspect ratio
-    plane.scale = (PANEL_WIDTH / PANEL_HEIGHT, 1, 1)
+        background: #000;
 
-    # Material
-    mat = bpy.data.materials.new(f"Material_{i+1}")
-    mat.use_nodes = True
+        overflow: hidden;
+    }
 
-    nodes = mat.node_tree.nodes
-    links = mat.node_tree.links
 
-    nodes.clear()
+    /* =====================================================
+       FIXED PANELS
+       ===================================================== */
 
-    tex = nodes.new("ShaderNodeTexImage")
-    tex.image = img
+    .panel {
+        position: relative;
 
-    emission = nodes.new("ShaderNodeEmission")
-    output = nodes.new("ShaderNodeOutputMaterial")
+        width: 100%;
+        height: 100%;
 
-    links.new(tex.outputs["Color"], emission.inputs["Color"])
-    links.new(emission.outputs["Emission"], output.inputs["Surface"])
+        overflow: hidden;
 
-    plane.data.materials.append(mat)
+        background: #000;
 
-    # Position panel
-    plane.location.x = (i - 1.5) * 2.1
+        border-right: 2px solid #000;
+    }
 
-# Camera
-bpy.ops.object.camera_add(location=(0, 0, 10))
-camera = bpy.context.object
-scene.camera = camera
+    .panel:last-child {
+        border-right: none;
+    }
 
-camera.data.type = 'ORTHO'
-camera.data.ortho_scale = 8.4
 
-# Camera looks down
-camera.rotation_euler = (0, 0, 0)
+    /* =====================================================
+       IMAGE
+       ===================================================== */
 
-# Output settings
-scene.render.image_settings.file_format = 'FFMPEG'
-scene.render.ffmpeg.format = 'MPEG4'
-scene.render.ffmpeg.codec = 'H264'
-scene.render.filepath = bpy.path.abspath("//" + output_path)
+    .panel img {
+        position: absolute;
 
-# Timeline
-scene.frame_start = 1
-scene.frame_end = DURATION_PER_IMAGE * FPS * 4
+        top: 0;
+        left: 0;
 
-print("Destrier showcase setup complete.")
+        height: 100%;
+        width: auto;
+
+        max-width: none;
+
+        object-fit: cover;
+
+        transform: translateX(0);
+
+        animation-name: slide;
+        animation-duration: 8s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+
+    /* =====================================================
+       SLIDING ANIMATION
+       ===================================================== */
+
+    @keyframes slide {
+
+        0% {
+            transform: translateX(0%);
+        }
+
+        25% {
+            transform: translateX(-25%);
+        }
+
+        50% {
+            transform: translateX(-50%);
+        }
+
+        75% {
+            transform: translateX(-75%);
+        }
+
+        100% {
+            transform: translateX(-75%);
+        }
+
+    }
+
+
+    /* =====================================================
+       OPTIONAL PANEL LABELS
+       ===================================================== */
+
+    .label {
+        position: absolute;
+
+        left: 20px;
+        bottom: 20px;
+
+        z-index: 10;
+
+        color: white;
+
+        font-family:
+            Arial,
+            Helvetica,
+            sans-serif;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+
+        text-shadow:
+            0 2px 10px rgba(0,0,0,0.8);
+
+        pointer-events: none;
+    }
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     4 FIXED WINDOWS
+     ======================================================= -->
+
+<div class="showcase">
+
+
+    <!-- ================= CLAY ================= -->
+
+    <div class="panel">
+
+        <img
+            src="Renders/C001.png"
+            alt="Destrier Clay"
+        >
+
+        <div class="label">
+            CLAY
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOPOLOGY ================= -->
+
+    <div class="panel">
+
+        <img
+            src="Renders/T001.png"
+            alt="Destrier Topology"
+        >
+
+        <div class="label">
+            TOPOLOGY
+        </div>
+
+    </div>
+
+
+    <!-- ================= ZEBRA ================= -->
+
+    <div class="panel">
+
+        <img
+            src="Renders/Z001.png"
+            alt="Destrier Zebra Analysis"
+        >
+
+        <div class="label">
+            ZEBRA
+        </div>
+
+    </div>
+
+
+    <!-- ================= FINAL ================= -->
+
+    <div class="panel">
+
+        <img
+            src="Renders/R001.png"
+            alt="Destrier Final Render"
+        >
+
+        <div class="label">
+            FINAL
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
