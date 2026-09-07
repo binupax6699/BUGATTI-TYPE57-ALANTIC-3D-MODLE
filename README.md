@@ -81,12 +81,12 @@ The rendered footage was edited into the final cinematic, with the shots arrange
 
 <table>
   <tr>
-    <td><img src="001.png" width="450"></td>
-    <td><img src="002.png" width="450"></td>
+    <td><img src="Renders/001.png" width="450"></td>
+    <td><img src="Renders/004.png" width="450"></td>
   </tr>
   <tr>
-    <td><img src="003.png" width="450"></td>
-    <td><img src="004.png" width="450"></td>
+    <td><img src="Renders/005.png" width="450"></td>
+    <td><img src="Renders/003.png" width="450"></td>
   </tr>
 </table>
 
