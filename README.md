@@ -109,7 +109,7 @@ You may use, modify, and share this project for **non-commercial purposes**, wit
 * **Software:** Blender
 * **Type:** 3D Vehicle / Cinematic
 * **Work:** Modeling, Hard-Surface Modeling, Materials, Texturing, Animation, Lighting, Rendering, Video Editing
-* **Render Engine:** Cycles
+* **Render Engine:** EEVEE
 * **Animation:** ~700 frames
 * **Time Spent:** 40+ hours
 * **Status:** Completed
