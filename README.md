@@ -2,28 +2,28 @@
 
 ## Overview
 
-A detailed 3D recreation of the **Bugatti Type 57 Atlantic** created entirely in Blender. The model was built from online images and Pinterest references, with the goal of recreating the car's distinctive bodywork, mechanical details, interior, and overall character.
+A detailed 3D recreation of the **Bugatti Type 57 Atlantic** created entirely in Blender. The model was built using online images and Pinterest references, with the goal of recreating the car's distinctive bodywork, mechanical details, interior, and overall character.
 
-The completed model was then used to create a cinematic animation with approximately **700 frames**.
+The completed model was then used to create a cinematic animation of approximately **700 frames**.
 
 ## Modeling Process
 
 I started by modeling the main body from reference images, marking the major body segments and building the forms around them. The body was modeled with **Subdivision Surface** enabled to maintain smooth and controlled shapes.
 
-Details were progressively added throughout the model, including:
+I modeled the car's components and details from scratch, including:
 
-* Body panels and segmented bodywork
+* Main body and segmented bodywork
 * Rivets and fasteners
 * Front grille
 * Headlights and rear lights
-* Hood hinges
-* Door hinges and doors
+* Hood and hood hinges
+* Doors and door hinges
 * Windshield wipers and mechanisms
 * Rear plate holder
-* Exterior trim and smaller body components
+* Exterior trim and smaller components
 * Wheels and tires
 
-I also modeled the underside of the car, including mechanical components such as:
+I also modeled the underside of the car, including the:
 
 * Suspension
 * Radiator
@@ -32,7 +32,7 @@ I also modeled the underside of the car, including mechanical components such as
 
 ## Interior
 
-After completing the exterior, I modeled the interior and added its major components, including:
+The interior was also modeled from scratch, including:
 
 * Dashboard
 * Steering wheel
@@ -44,19 +44,19 @@ After completing the exterior, I modeled the interior and added its major compon
 
 ## Materials & Textures
 
-I added materials and textures throughout the model while refining the surfaces and smaller details.
+I created and applied the materials and textures throughout the model.
 
-Some textures were created with the help of AI, while other details were created using traditional texture workflows. I also used **normal maps** for additional surface detail, including the grille and tire-related details.
+Some textures were created with the help of AI, while other details were made using normal maps and traditional texturing techniques. These were used to add additional surface detail to areas such as the grille and tires.
 
-The model was continuously refined throughout the process to improve the overall shape, detail, and appearance.
+The model was continuously refined throughout the process to improve its shapes, details, materials, and overall appearance.
 
 ## Animation & Lighting
 
-Once the model was complete, I created the cinematic setup in Blender.
+After completing the model, I created the cinematic setup in Blender.
 
-* Animated the camera for smooth movement.
+* Animated the camera with smooth movements.
 * Animated and adjusted the lighting for the shots.
-* Built the scenes without relying on a large environment, keeping the focus on the car.
+* Kept the scene focused on the car without a large environment.
 * Created approximately **700 frames** of animation.
 
 ## Rendering
@@ -79,11 +79,16 @@ The rendered footage was edited into the final cinematic, with the shots arrange
 
 ## Renders & Media
 
-<!-- Add renders here -->
-
-## Project Files & Demo
-
-The **3D model itself is the main project**, while the completed animation is presented through the YouTube video above.
+<table>
+  <tr>
+    <td><img src="001.png" width="450"></td>
+    <td><img src="002.png" width="450"></td>
+  </tr>
+  <tr>
+    <td><img src="003.png" width="450"></td>
+    <td><img src="004.png" width="450"></td>
+  </tr>
+</table>
 
 ## References
 
@@ -106,7 +111,7 @@ You may use, modify, and share this project for **non-commercial purposes**, wit
 * **Work:** Modeling, Hard-Surface Modeling, Materials, Texturing, Animation, Lighting, Rendering, Video Editing
 * **Render Engine:** Cycles
 * **Animation:** ~700 frames
+* **Time Spent:** 40+ hours
 * **Status:** Completed
-* **Time Spent:** [Add Time]
 
 
