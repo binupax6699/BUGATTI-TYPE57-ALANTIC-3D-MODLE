@@ -38,7 +38,6 @@ The interior was also modeled from scratch, including:
 * Steering wheel
 * Gear shifter
 * Interior trim
-* Mirrors
 * Wiper mechanisms
 * Additional interior controls and details
 
