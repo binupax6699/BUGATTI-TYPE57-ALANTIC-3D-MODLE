@@ -1,5 +1,16 @@
 # BUGATTI TYPE 57 ATLANTIC — 3D MODEL & CINEMATIC
 
+<table>
+  <tr>
+    <td><img src="Renders/001.png" width="450"></td>
+    <td><img src="Renders/004.png" width="450"></td>
+  </tr>
+  <tr>
+    <td><img src="Renders/005.png" width="450"></td>
+    <td><img src="Renders/003.png" width="450"></td>
+  </tr>
+</table>
+
 ## Overview
 
 A detailed 3D recreation of the **Bugatti Type 57 Atlantic** created entirely in Blender. The model was built using online images and Pinterest references, with the goal of recreating the car's distinctive bodywork, mechanical details, interior, and overall character.
@@ -75,19 +86,6 @@ The rendered footage was edited into the final cinematic, with the shots arrange
 ## Final Video
 
 **[Watch the Video in YouTube](https://youtube.com/shorts/bBb1QaNMcGE?si=ieJrdBVQxbxEvRhj)**
-
-## Renders & Media
-
-<table>
-  <tr>
-    <td><img src="Renders/001.png" width="450"></td>
-    <td><img src="Renders/004.png" width="450"></td>
-  </tr>
-  <tr>
-    <td><img src="Renders/005.png" width="450"></td>
-    <td><img src="Renders/003.png" width="450"></td>
-  </tr>
-</table>
 
 ## References
 
