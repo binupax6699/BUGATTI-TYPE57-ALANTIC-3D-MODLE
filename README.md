@@ -19,6 +19,13 @@ The completed model was then used to create a cinematic animation of approximate
 
 ## Modeling Process
 
+<table>
+  <tr>
+    <td><img src="row/row1.png" width="450"></td>
+    <td><img src="row/row2.png" width="450"></td>
+  </tr>
+</table>
+
 I started by modeling the main body from reference images, marking the major body segments and building the forms around them. The body was modeled with **Subdivision Surface** enabled to maintain smooth and controlled shapes.
 
 I modeled the car's components and details from scratch, including:
