@@ -17,6 +17,11 @@ A detailed 3D recreation of the **Bugatti Type 57 Atlantic** created entirely in
 
 The completed model was then used to create a cinematic animation of approximately **700 frames**.
 
+## Demos
+
+**3D Model:** [View the 3D MODEL on Sketchfab](https://sketchfab.com/3d-models/bugatti-type-57sc-atlantic-3d-modle-6c812b9ab2c2482fbb72e31ac19bb593)
+
+
 ## Modeling Process
 
 <table>
